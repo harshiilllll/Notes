@@ -120,7 +120,11 @@
             tableBody.innerHTML = str;
         }
         add = document.getElementById("add");
-        add.addEventListener("click", getAndUpdate);
+        add.addEventListener("click", ()=>{
+            getAndUpdate();
+            document.getElementById("title").value = "";
+            document.getElementById("description").value = "";
+        });
         update();
         function deleted(itemIndex) {
             console.log("Delete", itemIndex);
